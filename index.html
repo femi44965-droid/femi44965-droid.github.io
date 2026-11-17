@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official portfolio of Johnson Joseph Mauzansu, Founder and CEO of Josmau Soft Tech.">
+  <meta name="author" content="Johnson Joseph Mauzansu">
+  <meta name="theme-color" content="#101b32">
+  <title>Johnson Joseph Mauzansu | Founder &amp; CEO</title>
+  <style>
+    :root {
+      --navy: #101b32;
+      --navy-2: #172744;
+      --blue: #2695f5;
+      --pale: #edf5ff;
+      --ink: #182338;
+      --muted: #657188;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: var(--ink);
+      background: #f7f9fc;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, 90%); margin: auto; }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #ffffff18;
+    }
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: 1px; text-decoration: none; }
+    .logo span { color: var(--blue); }
+    nav ul { list-style: none; display: flex; gap: 25px; flex-wrap: wrap; }
+    nav a { color: #e6eefb; text-decoration: none; font-size: .93rem; }
+    nav a:hover { color: #7dc1ff; }
+    .hero {
+      color: var(--white);
+      background: radial-gradient(circle at 80% 20%, #244c7e 0, transparent 35%), var(--navy);
+      padding: 82px 0 90px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: 55px;
+    }
+    .eyebrow {
+      color: #86c7ff;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+      margin: 16px 0;
+    }
+    .role { color: #8ccaff; font-size: clamp(1.1rem, 2.5vw, 1.45rem); font-weight: 700; }
+    .intro { max-width: 620px; color: #d1dced; margin: 20px 0 28px; font-size: 1.05rem; }
+    .button {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: .2s;
+    }
+    .button:hover { background: #0877d4; transform: translateY(-2px); }
+    .portrait-wrap {
+      width: min(100%, 350px);
+      justify-self: end;
+      padding: 10px;
+      border: 1px solid #8ccaff55;
+      border-radius: 22px;
+      background: #ffffff0d;
+      box-shadow: 0 25px 65px #0005;
+    }
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 28%;
+      display: block;
+      border-radius: 15px;
+    }
+    section { padding: 78px 0; }
+    .section-heading { text-align: center; margin-bottom: 38px; }
+    .section-heading h2 { color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .section-heading p { color: var(--muted); margin-top: 8px; }
+    .about-copy { max-width: 820px; margin: auto; text-align: center; color: #526078; font-size: 1.05rem; }
+    .services { background: var(--pale); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border: 1px solid #e4ebf5;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px #1b35500a;
+    }
+    .card .number { color: var(--blue); font-weight: 800; font-size: .8rem; letter-spacing: 1px; }
+    .card h3 { color: var(--navy); margin: 8px 0; }
+    .card p { color: var(--muted); font-size: .95rem; }
+    .company-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      padding: 36px;
+      border-radius: 16px;
+      color: white;
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+    }
+    .company-box h3 { font-size: 2rem; color: #8ccaff; margin-bottom: 8px; }
+    .company-box p { color: #d5dfed; }
+    .contact { background: var(--navy); color: white; text-align: center; }
+    .contact h2 { color: white; }
+    .contact p { color: #d1dced; margin: 10px 0 22px; }
+    .contact a.email { color: #8ccaff; text-decoration: none; font-weight: 700; }
+    footer { background: #0a1324; color: #b9c6d9; text-align: center; padding: 22px 0; font-size: .88rem; }
+    @media (max-width: 760px) {
+      nav { padding: 15px 0; flex-direction: column; }
+      nav ul { justify-content: center; gap: 12px 18px; }
+      .hero { padding: 58px 0 65px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 35px; }
+      .portrait-wrap { justify-self: center; width: min(78%, 300px); }
+      .cards { grid-template-columns: 1fr 1fr; }
+      section { padding: 60px 0; }
+    }
+    @media (max-width: 480px) {
+      .cards { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">JJM<span>.</span></a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Interests</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Technology • Creativity • Learning</p>
+          <h1>Johnson Joseph Mauzansu</h1>
+          <p class="role">Founder &amp; CEO of Josmau Soft Tech</p>
+          <p class="intro">
+            I am interested in technology, digital creativity and building useful solutions.
+            This is my personal space to share what I am learning, the work I create and the
+            journey behind Josmau Soft Tech.
+          </p>
+          <a class="button" href="#about">Get to know me</a>
+        </div>
+        <div class="portrait-wrap">
+          <img class="portrait" src="assets/johnson-joseph.jpg"
+               alt="Portrait of Johnson Joseph Mauzansu">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p>A little about my journey and interests.</p>
+        </div>
+        <p class="about-copy">
+          My name is Johnson Joseph Mauzansu. I am a Computer Engineering student
+          with an interest in web design, software development, cybersecurity,
+          IT services and content creation. I am committed to learning, improving
+          my skills and creating practical digital solutions. Through Josmau Soft Tech,
+          I am working towards building a technology-focused brand.
+        </p>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>My Areas of Interest</h2>
+          <p>Technology and creative fields I am developing.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><span class="number">01</span><h3>Web Design</h3><p>Designing clear, accessible and responsive website experiences.</p></article>
+          <article class="card"><span class="number">02</span><h3>Software Development</h3><p>Learning to create useful software and digital tools.</p></article>
+          <article class="card"><span class="number">03</span><h3>Cybersecurity</h3><p>Studying digital security and responsible security practices.</p></article>
+          <article class="card"><span class="number">04</span><h3>IT Services</h3><p>Exploring technology support and practical IT solutions.</p></article>
+          <article class="card"><span class="number">05</span><h3>Content Creation</h3><p>Creating informative and engaging digital content.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="company">
+      <div class="container">
+        <div class="company-box">
+          <p class="eyebrow">My Company</p>
+          <h3>Josmau Soft Tech</h3>
+          <p>
+            A developing technology and digital solutions brand focused on
+            web design, software development, cybersecurity, IT services
+            and content creation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Let's Connect</h2>
+          <p>For professional enquiries and collaboration.</p>
+        </div>
+        <p>Email me at</p>
+        <a class="email" href="mailto:femi44965@gmail.com">femi44965@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Johnson Joseph Mauzansu. All rights reserved.</p>
+      <p>Founder &amp; CEO — Josmau Soft Tech</p>
+    </div>
+  </footer>
+</body>
+</html>
